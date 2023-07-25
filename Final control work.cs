@@ -6,7 +6,7 @@ string[] CreateArray()
     if (enterSymbols == null)
     {
         enterSymbols = "";
-    };
+    }
     char[] separators = new char[] { ',', ' ' };
     string[] array = enterSymbols.Split(separators, StringSplitOptions.RemoveEmptyEntries);
     return array;
