@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Антон\\Desktop\\Итоговая контрольная работа по основному блоку\\Контрольная работа\\Контрольная работа.csproj",
-      "projectName": "Контрольная работа",
-      "projectPath": "C:\\Users\\Антон\\Desktop\\Итоговая контрольная работа по основному блоку\\Контрольная работа\\Контрольная работа.csproj",
+      "projectUniqueName": "C:\\Users\\Антон\\Desktop\\Итоговая контрольная работа по основному блоку\\Контрольная работа\\Final control work.csproj",
+      "projectName": "Final control work",
+      "projectPath": "C:\\Users\\Антон\\Desktop\\Итоговая контрольная работа по основному блоку\\Контрольная работа\\Final control work.csproj",
       "packagesPath": "C:\\Users\\Антон\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Антон\\Desktop\\Итоговая контрольная работа по основному блоку\\Контрольная работа\\obj\\",
       "projectStyle": "PackageReference",

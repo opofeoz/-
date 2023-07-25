@@ -1,39 +1,41 @@
-﻿//Задача 2. Напишите программу замена элементов массива: положительные элементы замените 
-//на соответствующие отрицательные, и наоборот.
-//[-4, -8, 8, 2] -> [4, 8, -8, -2]
+﻿
+string[] CreateArray()
+{
+    Console.WriteLine("Введите Первоначальный массив через пробел, по окончании ввода нажмите Enter: ");
+    string? enterSymbols = Console.ReadLine();
+    if (enterSymbols == null)
+    {
+        enterSymbols = "";
+    };
+    char[] separators = new char[] { ',', ' ' };
+    string[] array = enterSymbols.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+    return array;
+}
 
-int[] CreateRandomArray(int size, int minValue, int maxValue)
+void CreateNewArray(string[] tempArray, string[] array2)
 {
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
+    int count = 0;
+    for (int i = 0; i < tempArray.Length; i++)
     {
-        array[i] = new Random().Next(minValue, maxValue + 1);
+        if (tempArray[i].Length <= 3)
+        {
+            array2[count] = tempArray[i];
+            count++;
+        }
     }
-    return array;
 }
-void PrintArray(int[] array)
+void PrintArray(string[] tempArray)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < tempArray.Length; i++)
     {
-        System.Console.Write(array[i] + " ");
+        Console.Write($"{tempArray[i]} ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
-int[] InvertArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] *= -1;
-    }
-    return array;
-}
-System.Console.WriteLine("Input array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Input minimal elements of array: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Input maximal elements of array: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-int[] myArray = CreateRandomArray(size, minValue, maxValue);
-PrintArray(myArray);
-myArray = InvertArray(myArray);
-PrintArray(myArray);
+
+string[] tempArray = CreateArray();
+string[] array2 = new string[tempArray.Length];
+
+CreateNewArray(tempArray, array2);
+System.Console.WriteLine();
+PrintArray(array2);
